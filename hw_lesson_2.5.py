@@ -15,53 +15,40 @@
 # Оба дочерних класса должны наследовать методы get_name() и get_age() от базового класса.
 # Обеспечьте инкапсуляцию, чтобы атрибуты были защищены от неправильных модификаций извне.
 
-class Animal:
-    def __init__(self, name, age):
-        self._name = name
-        self._age = age
 
-    def get_name(self):
-        return self._name
+# class Animal: 
+#     def __init__(self, name, age): 
+#         self.name = name 
+#         self.age = age 
+         
+#     def get_info(self): 
+#         return f"{self.name} {self.age}" 
 
-    def get_age(self):
-        return self._age
+# class Dog(Animal): 
+#     def __init__(self, name, age, breed): 
+#         super().__init__(name, age) 
+#         self.breed = breed 
+             
+#     def get_breed(self): 
+#         return self.breed 
+         
+# dog = Dog("REX", 3, "Питбуль") 
+# print("Имя : ", dog.get_info()) 
+# print("Возраст: ", dog.age) 
+# print("Порода: ", dog.get_breed()) 
 
-class Dog(Animal):
-    def __init__(self, name, age, breed):
-        super().__init__(name, age)
-        self._breed = breed
-
-    def sound(self):
-        print("Woof!")
-
-    def get_breed(self):
-        return self._breed
-
-
-class Cat(Animal):
-    def __init__(self, name, age, color):
-        super().__init__(name, age)
-        self._color = color
-
-    def sound(self):
-        print("Meow!")
-
-    def get_color(self):
-        return self._color
-
-dog = Dog("Бобик", 3, "Джек Рассел терьер")
-cat = Cat("Мурзик", 5, "серый")
-
-print(dog.get_name())  
-print(dog.get_age())  
-print(dog.get_breed())  
-dog.sound() 
-
-print(cat.get_name())  
-print(cat.get_age())  
-print(cat.get_color())  
-cat.sound() 
-
+# class Cat(Animal): 
+#     def __init__(self, name, age, color): 
+#         super().__init__(name, age) 
+#         self.color = color 
+             
+#     def get_color(self): 
+#         return self.color 
+         
+# cat = Cat("Пума", 3, "полосатый") 
+# print("Имя: ", cat.get_info()) 
+# print("Возраст: ", cat.age) 
+# print("Окрас кота:", cat.get_color())
 
 # ДОП задание:
 # 	Загрузить Д/З в GitHub

@@ -11,25 +11,26 @@
 
 # 4. Метод `reset`: Этот метод должен сбрасывать значение таймера в начальное значение, указанное при создании объекта.
 
+
 class Timer:
     def __init__(self, initial_time):
         self.initial_time = initial_time
-        self.current_time = initial_time
+        self.time = initial_time
 
     def get_time(self):
-        return self.current_time
+        return self.time
 
     def start(self):
-        while self.current_time > 0:
-            self.current_time -= 1
-            print(self.current_time)
-            time.sleep(1)
+        while self.time > 0:
+            print(self.time)
+            self.time -= 1
 
     def reset(self):
-        self.current_time = self.initial_time
+        self.time = self.initial_time
 timer = Timer(10)
 print(timer.get_time())
-timer.start()  
-print(timer.start())
+
+timer.start() 
+
 timer.reset()
 print(timer.get_time())
